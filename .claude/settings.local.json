@@ -21,8 +21,7 @@
       "WebFetch(domain:www.clevelandclinic.ca)",
       "WebFetch(domain:www.sinaihealth.ca)",
       "WebFetch(domain:my.clevelandclinic.org)",
-      "WebFetch(domain:www.torontophysiotherapy.ca)",
-      "WebFetch(domain:images.unsplash.com)"
+      "WebFetch(domain:www.torontophysiotherapy.ca)"
     ]
   }
 }
