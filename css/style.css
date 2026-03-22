@@ -374,7 +374,8 @@ section.alt-bg { background: var(--uoft-off-white); }
 .event-info { padding: 20px 24px; flex: 1; }
 .event-info h3 { margin-bottom: 6px; font-family: var(--font-serif); }
 .event-info .event-details { font-size: 0.83rem; color: var(--uoft-text-light); margin-bottom: 8px; }
-.event-info .event-details span { margin-right: 16px; }
+.event-info .event-details span { margin-right: 16px; display: inline-flex; align-items: center; gap: 5px; }
+.detail-icon { flex-shrink: 0; color: var(--uoft-navy); vertical-align: middle; }
 .event-info p { font-size: 0.9rem; color: var(--uoft-text-light); }
 
 .events-list { display: flex; flex-direction: column; gap: 16px; }

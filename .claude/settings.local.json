@@ -22,7 +22,13 @@
       "WebFetch(domain:www.sinaihealth.ca)",
       "WebFetch(domain:my.clevelandclinic.org)",
       "WebFetch(domain:www.torontophysiotherapy.ca)",
-      "WebFetch(domain:images.unsplash.com)"
+      "WebFetch(domain:images.unsplash.com)",
+      "Bash(for f:*)",
+      "Bash(do sed:*)",
+      "Bash(done)",
+      "Bash(sed -i 's|&#128205; |<svg class=\"\"detail-icon\"\" width=\"\"14\"\" height=\"\"14\"\" fill=\"\"none\"\" stroke=\"\"currentColor\"\" stroke-width=\"\"2\"\" viewBox=\"\"0 0 24 24\"\"><path d=\"\"M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z\"\"/><circle cx=\"\"12\"\" cy=\"\"10\"\" r=\"\"3\"\"/></svg>|g' pages/events.html)",
+      "Bash(sed -i 's|&#128336; |<svg class=\"\"detail-icon\"\" width=\"\"14\"\" height=\"\"14\"\" fill=\"\"none\"\" stroke=\"\"currentColor\"\" stroke-width=\"\"2\"\" viewBox=\"\"0 0 24 24\"\"><circle cx=\"\"12\"\" cy=\"\"12\"\" r=\"\"10\"\"/><path d=\"\"M12 6v6l4 2\"\"/></svg>|g' pages/events.html)",
+      "Bash(sed -i 's|&#128197; |<svg class=\"\"detail-icon\"\" width=\"\"14\"\" height=\"\"14\"\" fill=\"\"none\"\" stroke=\"\"currentColor\"\" stroke-width=\"\"2\"\" viewBox=\"\"0 0 24 24\"\"><rect x=\"\"3\"\" y=\"\"4\"\" width=\"\"18\"\" height=\"\"18\"\" rx=\"\"2\"\"/><path d=\"\"M16 2v4M8 2v4M3 10h18\"\"/></svg>|g' pages/events.html)"
     ]
   }
 }
