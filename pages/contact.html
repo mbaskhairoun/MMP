@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Temerty Medicine Alumni | University of Toronto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23002A5C'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='18' font-weight='bold' font-family='serif'>T</text></svg>">
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>University of Toronto &mdash; Temerty Faculty of Medicine</span>
+      <div class="top-bar-links">
+        <a href="https://www.utoronto.ca" target="_blank">UofT Home</a>
+        <a href="https://temertymedicine.utoronto.ca" target="_blank">Faculty of Medicine</a>
+        <a href="#">Alumni Portal Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img class="logo-icon" src="https://upload.wikimedia.org/wikipedia/en/0/04/Utoronto_coa.svg" alt="University of Toronto Coat of Arms">
+        <div class="logo-text">
+          <span class="university">University of Toronto</span>
+          <span class="faculty">Temerty Medicine Alumni</span>
+        </div>
+      </a>
+      <button class="mobile-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> Contact</div>
+      <h1>Contact Us</h1>
+      <p>We'd love to hear from you. Reach out with questions, event ideas, or to get involved.</p>
+    </div>
+  </div>
+
+  <!-- Contact Section -->
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Contact Form -->
+        <div>
+          <h2 style="margin-bottom: 24px;">Send Us a Message</h2>
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you for your message! We will get back to you shortly.');">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" placeholder="Dr. Jane Smith" required>
+
+            <label for="email">Email Address *</label>
+            <input type="email" id="email" name="email" placeholder="jane.smith@example.com" required>
+
+            <label for="grad-year">Graduation Year</label>
+            <input type="text" id="grad-year" name="grad-year" placeholder="e.g., 2005">
+
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+              <option value="">Select a topic...</option>
+              <option value="general">General Inquiry</option>
+              <option value="events">Events &amp; Reunions</option>
+              <option value="mentorship">Mentorship Program</option>
+              <option value="giving">Donations &amp; Giving</option>
+              <option value="directory">Alumni Directory</option>
+              <option value="transcript">Transcript Requests</option>
+              <option value="media">Media &amp; Press</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" placeholder="How can we help you?" required></textarea>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
+
+        <!-- Contact Info -->
+        <div>
+          <h2 style="margin-bottom: 24px;">Get in Touch</h2>
+
+          <div class="contact-info-block">
+            <h3>Alumni Relations Office</h3>
+            <p>Temerty Faculty of Medicine<br>
+            University of Toronto<br>
+            1 King's College Circle<br>
+            Medical Sciences Building, Room 2109<br>
+            Toronto, ON M5S 1A8, Canada</p>
+          </div>
+
+          <div class="contact-info-block">
+            <h3>Phone</h3>
+            <p><a href="tel:+14169781234">+1 (416) 978-1234</a></p>
+            <p style="font-size: 0.85rem; color: #888;">Monday &ndash; Friday, 9:00 AM &ndash; 5:00 PM EST</p>
+          </div>
+
+          <div class="contact-info-block">
+            <h3>Email</h3>
+            <p><a href="mailto:medicine.advencement@utorontoalumni.ca">medicine.advencement@utorontoalumni.ca</a></p>
+          </div>
+
+          <div class="contact-info-block">
+            <h3>Follow Us</h3>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+              <a href="#" class="social-link" aria-label="Twitter">X</a>
+              <a href="#" class="social-link" aria-label="Instagram">ig</a>
+              <a href="#" class="social-link" aria-label="Facebook">f</a>
+              <a href="#" class="social-link" aria-label="YouTube">yt</a>
+            </div>
+          </div>
+
+          <div class="contact-info-block" style="margin-top: 32px; padding: 24px; background: var(--uoft-light-gray); border-radius: 8px;">
+            <h3>Quick Resources</h3>
+            <ul style="margin-top: 8px;">
+              <li style="margin-bottom: 8px;"><a href="#">Transcript Requests</a></li>
+              <li style="margin-bottom: 8px;"><a href="#">Update Your Alumni Profile</a></li>
+              <li style="margin-bottom: 8px;"><a href="#">Volunteer Opportunities</a></li>
+              <li style="margin-bottom: 8px;"><a href="#">Make a Gift</a></li>
+              <li><a href="#">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section (static placeholder) -->
+  <section class="alt-bg" style="padding: 48px 0;">
+    <div class="container">
+      <div style="background: var(--uoft-mid-gray); border-radius: 8px; height: 300px; display: flex; align-items: center; justify-content: center;">
+        <div style="text-align: center; color: var(--uoft-text-light);">
+          <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" style="margin-bottom: 8px;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <p style="font-weight: 600;">1 King's College Circle, Toronto, ON</p>
+          <p style="font-size: 0.85rem;">Medical Sciences Building &bull; University of Toronto</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img class="logo-icon" src="https://upload.wikimedia.org/wikipedia/en/0/04/Utoronto_coa.svg" alt="University of Toronto Coat of Arms" width="40" height="40" style="filter: brightness(0) invert(1); opacity: 0.85;">
+            <div class="logo-text">
+              <span class="university">University of Toronto</span>
+              <span class="faculty">Temerty Medicine Alumni</span>
+            </div>
+          </div>
+          <p>Connecting graduates of Canada's largest and most research-intensive medical school.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="#">Alumni Directory</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Career Services</a></li>
+            <li><a href="#">CME Programs</a></li>
+            <li><a href="#">Library Access</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="mailto:medicine.advencement@utorontoalumni.ca">medicine.advencement@utorontoalumni.ca</a></li>
+            <li><a href="tel:+14169781234">+1 (416) 978-1234</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 University of Toronto Temerty Faculty of Medicine. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

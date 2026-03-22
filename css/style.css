@@ -1,0 +1,963 @@
+/* ============================================
+   UofT Temerty Faculty of Medicine Alumni
+   Styled to match utoronto.ca
+   ============================================ */
+
+/* --- CSS Variables / Brand Tokens --- */
+:root {
+  --uoft-navy: #002A5C;
+  --uoft-blue: #1E3765;
+  --uoft-royal: #007FA3;
+  --uoft-light-blue: #DAE5ED;
+  --uoft-gold: #FFD54F;
+  --uoft-white: #FFFFFF;
+  --uoft-off-white: #F7F8FA;
+  --uoft-light-gray: #EDEEEF;
+  --uoft-mid-gray: #D6D6D6;
+  --uoft-dark-gray: #4A4A4A;
+  --uoft-text: #2C2C2C;
+  --uoft-text-light: #5A5A5A;
+  --uoft-accent: #E31837;
+  --uoft-link: #1A73A7;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.06);
+  --shadow-md: 0 2px 8px rgba(0,0,0,0.08);
+  --shadow-lg: 0 4px 20px rgba(0,0,0,0.10);
+  --radius: 4px;
+  --radius-lg: 8px;
+  --transition: 0.2s ease;
+  --max-width: 1280px;
+  --font-serif: 'Georgia', 'Times New Roman', serif;
+  --font-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --- Reset & Base --- */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-sans);
+  color: var(--uoft-text);
+  background: var(--uoft-white);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--uoft-link); text-decoration: none; transition: color var(--transition); }
+a:hover { color: var(--uoft-navy); text-decoration: underline; }
+ul { list-style: none; }
+
+.container { max-width: var(--max-width); margin: 0 auto; padding: 0 32px; }
+
+/* --- Typography (UofT uses serif headings + sans body) --- */
+h1, h2, h3, h4 { font-family: var(--font-serif); font-weight: 700; color: var(--uoft-navy); line-height: 1.3; }
+h1 { font-size: 2.8rem; letter-spacing: -0.02em; }
+h2 { font-size: 2rem; margin-bottom: 16px; }
+h3 { font-size: 1.3rem; margin-bottom: 8px; }
+h4 { font-size: 1.1rem; }
+p { margin-bottom: 12px; }
+
+.section-title {
+  text-align: center;
+  margin-bottom: 48px;
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  display: block;
+  width: 48px;
+  height: 3px;
+  background: var(--uoft-navy);
+  margin: 14px auto 0;
+}
+.section-subtitle {
+  color: var(--uoft-text-light);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 8px auto 0;
+}
+
+/* --- Buttons (UofT style: squared, bold, navy) --- */
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all var(--transition);
+  border: 2px solid transparent;
+  text-align: center;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-family: var(--font-sans);
+}
+.btn:hover { text-decoration: none; }
+.btn-primary {
+  background: var(--uoft-navy);
+  color: var(--uoft-white);
+  border-color: var(--uoft-navy);
+}
+.btn-primary:hover {
+  background: #001E41;
+  border-color: #001E41;
+  color: var(--uoft-white);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--uoft-white);
+  border-color: var(--uoft-white);
+}
+.btn-outline:hover {
+  background: var(--uoft-white);
+  color: var(--uoft-navy);
+}
+.btn-outline-dark {
+  background: transparent;
+  color: var(--uoft-navy);
+  border-color: var(--uoft-navy);
+}
+.btn-outline-dark:hover {
+  background: var(--uoft-navy);
+  color: var(--uoft-white);
+}
+.btn-gold {
+  background: var(--uoft-white);
+  color: var(--uoft-navy);
+  border-color: var(--uoft-white);
+  font-weight: 700;
+}
+.btn-gold:hover {
+  background: var(--uoft-light-gray);
+  border-color: var(--uoft-light-gray);
+}
+
+/* --- Top Bar (UofT style: thin navy utility bar) --- */
+.top-bar {
+  background: #000000;
+  color: var(--uoft-white);
+  font-size: 0.78rem;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-bar a { color: rgba(255,255,255,0.75); font-size: 0.78rem; text-decoration: none; }
+.top-bar a:hover { color: var(--uoft-white); text-decoration: underline; }
+.top-bar-links { display: flex; gap: 24px; }
+
+/* --- Header / Navigation (UofT: clean, white, strong navy border) --- */
+header {
+  background: var(--uoft-white);
+  border-bottom: 4px solid var(--uoft-navy);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 32px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+.logo:hover { text-decoration: none; }
+.logo-icon {
+  width: 52px;
+  height: 52px;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
+}
+.logo-text .university { font-size: 0.7rem; color: var(--uoft-text-light); font-weight: 500; letter-spacing: 1px; text-transform: uppercase; font-family: var(--font-sans); }
+.logo-text .faculty { font-size: 1.15rem; font-weight: 700; color: var(--uoft-navy); font-family: var(--font-serif); }
+
+nav ul {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+nav a {
+  padding: 10px 16px;
+  border-radius: 0;
+  font-weight: 500;
+  font-size: 0.88rem;
+  color: var(--uoft-text);
+  transition: all var(--transition);
+  text-decoration: none;
+  border-bottom: 3px solid transparent;
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+nav a:hover {
+  color: var(--uoft-navy);
+  border-bottom-color: var(--uoft-navy);
+  text-decoration: none;
+  background: transparent;
+}
+nav a.active {
+  color: var(--uoft-navy);
+  border-bottom-color: var(--uoft-navy);
+  font-weight: 700;
+  background: transparent;
+}
+nav .btn-primary { color: var(--uoft-white); border-bottom: none; text-transform: uppercase; }
+nav .btn-primary:hover { color: var(--uoft-white); background: #001E41; border-bottom: none; }
+
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+.mobile-toggle span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: var(--uoft-navy);
+  margin: 5px 0;
+  transition: var(--transition);
+}
+
+/* --- Hero Section (UofT: large image/navy bg, serif heading, clean) --- */
+.hero {
+  background: var(--uoft-navy);
+  color: var(--uoft-white);
+  padding: 90px 0 70px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&h=600&fit=crop') center/cover;
+  opacity: 0.15;
+}
+.hero h1 { margin-bottom: 20px; color: var(--uoft-white); position: relative; z-index: 1; font-family: var(--font-serif); }
+.hero p { font-size: 1.15rem; max-width: 620px; margin: 0 auto 36px; opacity: 0.92; position: relative; z-index: 1; font-family: var(--font-sans); }
+.hero-buttons { display: flex; gap: 16px; justify-content: center; position: relative; z-index: 1; flex-wrap: wrap; }
+
+/* --- Stats Bar --- */
+.stats-bar {
+  background: var(--uoft-white);
+  margin-top: -40px;
+  position: relative;
+  z-index: 10;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+  padding: 32px 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  text-align: center;
+  border-top: 4px solid var(--uoft-navy);
+}
+.stat-item h3 { font-size: 2.2rem; color: var(--uoft-navy); margin-bottom: 4px; font-family: var(--font-serif); }
+.stat-item p { color: var(--uoft-text-light); font-size: 0.88rem; margin: 0; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; }
+
+/* --- Sections --- */
+section { padding: 80px 0; }
+section.alt-bg { background: var(--uoft-off-white); }
+
+/* --- Card Grid --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 28px;
+}
+.card {
+  background: var(--uoft-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  border: 1px solid var(--uoft-light-gray);
+}
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+.card-image {
+  height: 210px;
+  background: var(--uoft-light-gray);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.card-image img { width: 100%; height: 100%; object-fit: cover; }
+.card-image .placeholder-icon {
+  font-size: 3rem;
+  color: var(--uoft-navy);
+  opacity: 0.3;
+}
+.card-body { padding: 24px; }
+.card-meta {
+  display: flex;
+  gap: 16px;
+  font-size: 0.8rem;
+  color: var(--uoft-text-light);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  font-weight: 500;
+}
+.card-meta span { display: flex; align-items: center; gap: 4px; }
+.card-tag {
+  display: inline-block;
+  background: var(--uoft-navy);
+  color: var(--uoft-white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+.card-body h3 { font-family: var(--font-serif); }
+.card-body h3 a { color: var(--uoft-navy); text-decoration: none; }
+.card-body h3 a:hover { color: var(--uoft-link); text-decoration: underline; }
+.card-body p { color: var(--uoft-text-light); font-size: 0.92rem; }
+
+/* --- Event Cards --- */
+.event-card {
+  display: flex;
+  background: var(--uoft-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  border: 1px solid var(--uoft-light-gray);
+}
+.event-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.event-date-block {
+  background: var(--uoft-navy);
+  color: var(--uoft-white);
+  min-width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  text-align: center;
+}
+.event-date-block .month { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1.5px; opacity: 0.8; font-weight: 600; }
+.event-date-block .day { font-size: 2rem; font-weight: 700; line-height: 1; font-family: var(--font-serif); }
+.event-date-block .year { font-size: 0.7rem; opacity: 0.6; margin-top: 2px; }
+.event-info { padding: 20px 24px; flex: 1; }
+.event-info h3 { margin-bottom: 6px; font-family: var(--font-serif); }
+.event-info .event-details { font-size: 0.83rem; color: var(--uoft-text-light); margin-bottom: 8px; }
+.event-info .event-details span { margin-right: 16px; }
+.event-info p { font-size: 0.9rem; color: var(--uoft-text-light); }
+
+.events-list { display: flex; flex-direction: column; gap: 16px; }
+
+/* --- Quick Links / Features --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 24px;
+}
+.feature-card {
+  background: var(--uoft-white);
+  border-radius: var(--radius);
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--uoft-light-gray);
+  transition: all var(--transition);
+}
+.feature-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--uoft-navy);
+}
+.feature-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--uoft-navy);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 1.6rem;
+  color: var(--uoft-white);
+}
+.feature-card h3 { margin-bottom: 8px; font-family: var(--font-serif); }
+.feature-card p { color: var(--uoft-text-light); font-size: 0.9rem; margin: 0; }
+
+/* --- Alumni Spotlight --- */
+.spotlight-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 28px;
+}
+.spotlight-card {
+  background: var(--uoft-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  text-align: center;
+  padding: 36px 28px;
+  border: 1px solid var(--uoft-light-gray);
+}
+.spotlight-avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: var(--uoft-light-gray);
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: 3px solid var(--uoft-navy);
+}
+.spotlight-avatar img { width: 100%; height: 100%; object-fit: cover; opacity: 1; }
+.spotlight-card h3 { margin-bottom: 4px; font-family: var(--font-serif); }
+.spotlight-card .role { font-size: 0.85rem; color: var(--uoft-link); font-weight: 500; margin-bottom: 4px; }
+.spotlight-card .grad-year { font-size: 0.78rem; color: var(--uoft-text-light); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 500; }
+.spotlight-card blockquote {
+  font-style: italic;
+  color: var(--uoft-text-light);
+  font-size: 0.9rem;
+  border-left: 3px solid var(--uoft-navy);
+  padding-left: 14px;
+  text-align: left;
+  margin: 0;
+  font-family: var(--font-serif);
+}
+
+/* --- CTA Banner --- */
+.cta-banner {
+  background: var(--uoft-navy);
+  color: var(--uoft-white);
+  text-align: center;
+  padding: 64px 24px;
+  position: relative;
+}
+.cta-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1562774053-701939374585?w=1600&h=400&fit=crop') center/cover;
+  opacity: 0.1;
+}
+.cta-banner h2 { color: var(--uoft-white); margin-bottom: 12px; position: relative; z-index: 1; }
+.cta-banner p { opacity: 0.9; margin-bottom: 24px; max-width: 550px; margin-left: auto; margin-right: auto; position: relative; z-index: 1; }
+.cta-banner .btn { margin: 0 8px; position: relative; z-index: 1; }
+
+/* --- About Page --- */
+.about-content { max-width: 800px; margin: 0 auto; }
+.about-content p { font-size: 1.05rem; color: var(--uoft-text-light); line-height: 1.8; }
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 28px;
+  margin-top: 48px;
+}
+.mission-card {
+  padding: 28px;
+  border-radius: var(--radius);
+  background: var(--uoft-white);
+  box-shadow: var(--shadow-sm);
+  border-left: 4px solid var(--uoft-navy);
+}
+.mission-card h3 { margin-bottom: 8px; font-family: var(--font-serif); }
+.mission-card p { color: var(--uoft-text-light); font-size: 0.92rem; margin: 0; }
+
+.leadership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+}
+.leader-card {
+  text-align: center;
+  padding: 24px;
+}
+.leader-avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: var(--uoft-light-gray);
+  margin: 0 auto 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: var(--uoft-navy);
+  opacity: 0.3;
+  border: 3px solid var(--uoft-navy);
+}
+.leader-card h3 { margin-bottom: 4px; font-size: 1.1rem; font-family: var(--font-serif); }
+.leader-card .title { font-size: 0.85rem; color: var(--uoft-link); }
+
+/* --- Contact Page --- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  font-size: 0.88rem;
+  margin-bottom: 6px;
+  color: var(--uoft-text);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--uoft-mid-gray);
+  border-radius: var(--radius);
+  font-size: 0.95rem;
+  font-family: var(--font-sans);
+  margin-bottom: 20px;
+  transition: border-color var(--transition);
+  background: var(--uoft-white);
+}
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--uoft-navy);
+  box-shadow: 0 0 0 3px rgba(0,42,92,0.1);
+}
+.contact-form textarea { resize: vertical; min-height: 120px; }
+.contact-form .btn { width: 100%; }
+
+.contact-info-block { margin-bottom: 28px; }
+.contact-info-block h3 { margin-bottom: 8px; font-size: 1.05rem; font-family: var(--font-serif); }
+.contact-info-block p { color: var(--uoft-text-light); font-size: 0.92rem; }
+.contact-info-block a { font-weight: 500; }
+
+.social-links { display: flex; gap: 10px; margin-top: 16px; }
+.social-link {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius);
+  background: var(--uoft-navy);
+  color: var(--uoft-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  transition: background var(--transition);
+  text-decoration: none;
+}
+.social-link:hover { background: var(--uoft-link); color: var(--uoft-white); text-decoration: none; }
+
+/* --- Footer (UofT: dark navy, clean columns, serif headings) --- */
+footer {
+  background: #1A1A2E;
+  color: rgba(255,255,255,0.75);
+  padding: 56px 0 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer-brand .logo-text .university { color: rgba(255,255,255,0.5); }
+.footer-brand .logo-text .faculty { color: var(--uoft-white); }
+.footer-brand p { margin-top: 14px; font-size: 0.88rem; line-height: 1.7; }
+
+footer h4 {
+  color: var(--uoft-white);
+  margin-bottom: 18px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-family: var(--font-sans);
+  font-weight: 700;
+}
+footer ul li { margin-bottom: 10px; }
+footer ul a { color: rgba(255,255,255,0.65); font-size: 0.88rem; text-decoration: none; }
+footer ul a:hover { color: var(--uoft-white); text-decoration: underline; }
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+}
+.footer-bottom a { color: rgba(255,255,255,0.5); text-decoration: none; }
+.footer-bottom a:hover { color: var(--uoft-white); text-decoration: underline; }
+.footer-legal { display: flex; gap: 24px; }
+
+/* --- Page Header (inner pages) --- */
+.page-header {
+  background: var(--uoft-navy);
+  color: var(--uoft-white);
+  padding: 56px 0 44px;
+  text-align: center;
+  position: relative;
+}
+.page-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1600&h=400&fit=crop') center/cover;
+  opacity: 0.08;
+}
+.page-header h1 { color: var(--uoft-white); margin-bottom: 8px; font-size: 2.25rem; position: relative; z-index: 1; }
+.page-header p { opacity: 0.85; font-size: 1.05rem; position: relative; z-index: 1; }
+.breadcrumb {
+  font-size: 0.8rem;
+  margin-bottom: 16px;
+  opacity: 0.65;
+  position: relative;
+  z-index: 1;
+}
+.breadcrumb a { color: var(--uoft-white); text-decoration: none; }
+.breadcrumb a:hover { text-decoration: underline; }
+.breadcrumb span { margin: 0 8px; }
+
+/* --- News Page Filters --- */
+.filter-bar {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  justify-content: center;
+}
+.filter-btn {
+  padding: 8px 20px;
+  border-radius: var(--radius);
+  border: 1px solid var(--uoft-mid-gray);
+  background: var(--uoft-white);
+  color: var(--uoft-text-light);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-family: var(--font-sans);
+}
+.filter-btn:hover, .filter-btn.active {
+  background: var(--uoft-navy);
+  color: var(--uoft-white);
+  border-color: var(--uoft-navy);
+}
+
+/* --- Individual Event Pages --- */
+.event-banner {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.event-detail-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.event-detail-sidebar {
+  background: var(--uoft-off-white);
+  border-radius: var(--radius);
+  padding: 28px;
+  border: 1px solid var(--uoft-light-gray);
+  position: sticky;
+  top: 100px;
+}
+
+.event-detail-sidebar h3 {
+  font-family: var(--font-serif);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 2px solid var(--uoft-navy);
+}
+
+.event-detail-sidebar .detail-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 16px;
+  font-size: 0.92rem;
+}
+
+.event-detail-sidebar .detail-row .detail-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.event-detail-sidebar .detail-row strong {
+  display: block;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--uoft-text-light);
+  margin-bottom: 2px;
+}
+
+.event-content h2 {
+  font-family: var(--font-serif);
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+
+.event-content h2:first-child {
+  margin-top: 0;
+}
+
+.event-content ul {
+  margin: 12px 0 20px 20px;
+}
+
+.event-content ul li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+  color: var(--uoft-text-light);
+  font-size: 0.95rem;
+}
+
+.event-content ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: var(--uoft-navy);
+  border-radius: 50%;
+}
+
+.event-content p {
+  color: var(--uoft-text-light);
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.event-content .note-box {
+  background: #FFF8E1;
+  border-left: 4px solid #FFC107;
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  margin: 24px 0;
+  font-size: 0.92rem;
+  color: var(--uoft-dark-gray);
+}
+
+/* --- Sponsors Section --- */
+.sponsors-section {
+  text-align: center;
+}
+
+.sponsors-tier {
+  margin-bottom: 36px;
+}
+
+.sponsors-tier h3 {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--uoft-text-light);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.sponsors-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.sponsor-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 32px;
+  background: var(--uoft-white);
+  border: 1px solid var(--uoft-light-gray);
+  border-radius: var(--radius);
+  min-width: 200px;
+  min-height: 80px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--uoft-navy);
+  transition: all var(--transition);
+  font-family: var(--font-sans);
+}
+
+.sponsor-logo:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--uoft-navy);
+}
+
+.sponsor-logo-sm {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 24px;
+  background: var(--uoft-white);
+  border: 1px solid var(--uoft-light-gray);
+  border-radius: var(--radius);
+  min-width: 160px;
+  min-height: 56px;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: var(--uoft-dark-gray);
+  transition: all var(--transition);
+  font-family: var(--font-sans);
+}
+
+.sponsor-logo-sm:hover {
+  box-shadow: var(--shadow-sm);
+  border-color: var(--uoft-mid-gray);
+}
+
+/* --- Speaker Bio Card --- */
+.speaker-card {
+  display: flex;
+  gap: 24px;
+  background: var(--uoft-off-white);
+  border-radius: var(--radius);
+  padding: 28px;
+  border: 1px solid var(--uoft-light-gray);
+  margin: 24px 0;
+}
+
+.speaker-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--uoft-navy);
+  flex-shrink: 0;
+}
+
+.speaker-card .speaker-info h3 {
+  font-family: var(--font-serif);
+  margin-bottom: 4px;
+}
+
+.speaker-card .speaker-info .speaker-title {
+  font-size: 0.88rem;
+  color: var(--uoft-link);
+  margin-bottom: 8px;
+  font-weight: 500;
+}
+
+.speaker-card .speaker-info p {
+  font-size: 0.9rem;
+  color: var(--uoft-text-light);
+  margin: 0;
+}
+
+/* --- Registration Success --- */
+.registration-success {
+  text-align: center;
+  padding: 48px 32px;
+  background: #E8F5E9;
+  border-radius: var(--radius);
+  border: 1px solid #A5D6A7;
+}
+
+.registration-success h2 {
+  color: #2E7D32;
+  margin-bottom: 12px;
+}
+
+.registration-success p {
+  color: #4A4A4A;
+  font-size: 1rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .stats-bar { grid-template-columns: repeat(2, 1fr); margin: -40px 24px 0; }
+}
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.6rem; }
+  section { padding: 56px 0; }
+  .container { padding: 0 20px; }
+
+  .mobile-toggle { display: block; }
+
+  nav { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--uoft-white); border-bottom: 4px solid var(--uoft-navy); padding: 16px 24px; box-shadow: var(--shadow-md); }
+  nav.open { display: block; }
+  nav ul { flex-direction: column; gap: 0; }
+  nav a { display: block; padding: 12px 16px; border-bottom: 1px solid var(--uoft-light-gray); }
+  nav a:last-child { border-bottom: none; }
+
+  .hero { padding: 60px 0 50px; }
+  .hero h1 { font-size: 1.8rem; }
+
+  .stats-bar { grid-template-columns: repeat(2, 1fr); padding: 24px; margin: -30px 16px 0; }
+
+  .contact-grid { grid-template-columns: 1fr; }
+
+  .event-card { flex-direction: column; }
+  .event-date-block { flex-direction: row; gap: 8px; padding: 12px 16px; min-width: auto; }
+
+  .footer-grid { grid-template-columns: 1fr; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+
+  .top-bar { display: none; }
+
+  .card-grid { grid-template-columns: 1fr; }
+
+  .event-detail-grid { grid-template-columns: 1fr; }
+  .event-detail-sidebar { position: static; }
+  .speaker-card { flex-direction: column; text-align: center; }
+  .speaker-card img { margin: 0 auto; }
+}
+
+@media (max-width: 480px) {
+  .stats-bar { grid-template-columns: 1fr; }
+  .hero-buttons { flex-direction: column; align-items: center; }
+  .hero-buttons .btn { width: 100%; max-width: 280px; }
+}

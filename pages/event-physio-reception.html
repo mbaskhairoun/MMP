@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Physiotherapy Alumni Reception | Temerty Medicine Alumni | University of Toronto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23002A5C'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='18' font-weight='bold' font-family='serif'>T</text></svg>">
+  <style>
+    .event-banner-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+    .event-detail-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+      margin-top: 8px;
+    }
+    .event-sidebar {
+      background: #f5f7fa;
+      border-radius: 10px;
+      padding: 32px 28px;
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+    .event-sidebar h3 {
+      font-size: 1.1rem;
+      color: #002A5C;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #002A5C;
+    }
+    .event-meta-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .event-meta-item svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: #002A5C;
+    }
+    .event-meta-item .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #888;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .event-meta-item .value {
+      font-size: 0.95rem;
+      color: #1a1a2e;
+      line-height: 1.5;
+    }
+    .event-main h2 {
+      font-family: 'Georgia', serif;
+      color: #002A5C;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      margin-top: 36px;
+    }
+    .event-main h2:first-of-type {
+      margin-top: 0;
+    }
+    .event-main p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #333;
+      margin-bottom: 16px;
+    }
+    .expect-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .expect-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 0.95rem;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .expect-list li:last-child {
+      border-bottom: none;
+    }
+    .expect-list li::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #002A5C;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .btn-register {
+      display: inline-block;
+      background: #002A5C;
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      width: 100%;
+      margin-top: 24px;
+      transition: background 0.2s;
+    }
+    .btn-register:hover {
+      background: #001a3a;
+      color: #fff;
+      text-decoration: none;
+    }
+    .btn-register-outline {
+      display: inline-block;
+      background: transparent;
+      color: #002A5C;
+      border: 2px solid #002A5C;
+      padding: 12px 36px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+      transition: all 0.2s;
+    }
+    .btn-register-outline:hover {
+      background: #002A5C;
+      color: #fff;
+      text-decoration: none;
+    }
+    .event-tag {
+      display: inline-block;
+      background: #002A5C;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+
+    /* Sponsors */
+    .sponsors-section {
+      padding: 56px 0;
+      background: #f8f9fb;
+    }
+    .sponsors-section h2 {
+      font-family: 'Georgia', serif;
+      color: #002A5C;
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 40px;
+    }
+    .sponsors-tier-label {
+      text-align: center;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #888;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+    .sponsors-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 24px;
+      max-width: 960px;
+      margin: 0 auto 48px;
+    }
+    .sponsors-grid-sm {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+      gap: 16px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .sponsor-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 28px;
+      border-radius: 8px;
+      background: #fff;
+      min-height: 100px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .sponsor-logo:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.10);
+    }
+    .sponsor-logo img {
+      max-height: 60px;
+      max-width: 180px;
+      object-fit: contain;
+    }
+    .sponsor-logo-sm {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 16px 20px;
+      border-radius: 6px;
+      background: #fff;
+      min-height: 64px;
+      border: 1px solid #e0e0e0;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .sponsor-logo-sm:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+    .sponsor-logo-sm img {
+      max-height: 40px;
+      max-width: 140px;
+      object-fit: contain;
+    }
+
+    /* Registration Form */
+    .registration-section {
+      padding: 56px 0 64px;
+    }
+    .registration-section h2 {
+      font-family: 'Georgia', serif;
+      color: #002A5C;
+      font-size: 1.5rem;
+      margin-bottom: 8px;
+    }
+    .registration-section > .container > p {
+      color: #555;
+      margin-bottom: 32px;
+    }
+    .contact-form .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .contact-form .form-group {
+      margin-bottom: 20px;
+    }
+    .contact-form .form-group label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      color: #333;
+      font-size: 0.92rem;
+    }
+    .contact-form .form-group input,
+    .contact-form .form-group select,
+    .contact-form .form-group textarea {
+      width: 100%;
+      box-sizing: border-box;
+    }
+    .contact-form .helper-text {
+      font-size: 0.8rem;
+      color: #888;
+      margin-top: 4px;
+    }
+    #registration-success {
+      background: #e8f5e9;
+      border: 1px solid #81c784;
+      color: #2e7d32;
+      padding: 32px;
+      border-radius: 10px;
+      font-size: 1.05rem;
+      font-weight: 500;
+      text-align: center;
+      margin-top: 16px;
+    }
+    #registration-success h3 {
+      color: #2e7d32;
+      margin-bottom: 8px;
+    }
+
+    @media (max-width: 768px) {
+      .event-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .event-banner-img {
+        border-radius: 8px;
+      }
+      .event-sidebar {
+        position: static;
+      }
+      .contact-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+      }
+      .sponsors-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      .sponsors-grid-sm {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>University of Toronto &mdash; Temerty Faculty of Medicine</span>
+      <div class="top-bar-links">
+        <a href="https://www.utoronto.ca" target="_blank">UofT Home</a>
+        <a href="https://temertymedicine.utoronto.ca" target="_blank">Faculty of Medicine</a>
+        <a href="#">Alumni Portal Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img class="logo-icon" src="https://upload.wikimedia.org/wikipedia/en/0/04/Utoronto_coa.svg" alt="University of Toronto Coat of Arms">
+        <div class="logo-text">
+          <span class="university">University of Toronto</span>
+          <span class="faculty">Temerty Medicine Alumni</span>
+        </div>
+      </a>
+      <button class="mobile-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html" class="active">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="events.html">Events</a> <span>/</span> Physiotherapy Alumni Reception</div>
+      <h1>UofT Physiotherapy Alumni Reception</h1>
+      <p>A formal afternoon of networking, connection, and celebration at historic Knox College.</p>
+    </div>
+  </div>
+
+  <!-- Event Content -->
+  <section>
+    <div class="container">
+      <img class="event-banner-img" src="../images/event-banner-physio.png" alt="UofT Physiotherapy Alumni Reception Banner">
+
+      <div class="event-detail-grid">
+        <!-- Main Content -->
+        <div class="event-main">
+          <span class="event-tag">Reception</span>
+          <h2>About This Event</h2>
+          <p>Dear Alumni,</p>
+          <p>You are warmly invited to attend a U of T Physiotherapy Alumni Reception taking place at the historic Knox College. This formal afternoon reception will bring together UofT physiotherapy alumni, students, and professionals for networking, conversation, and connection within the physiotherapy community.</p>
+
+          <h2>What to Expect</h2>
+          <ul class="expect-list">
+            <li>Networking with physiotherapy professionals and clinic representatives</li>
+            <li>Opportunities to connect with fellow alumni and current students</li>
+            <li>Light program remarks</li>
+            <li>Light snacks and refreshments</li>
+          </ul>
+
+          <h2>Sponsors &amp; Partners</h2>
+          <p>This event is made possible through the generous support of leading physiotherapy clinics and healthcare institutions across Toronto. See our full list of sponsors below.</p>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="event-sidebar">
+          <h3>Event Details</h3>
+
+          <div class="event-meta-item">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <div>
+              <div class="label">Date</div>
+              <div class="value">May 18, 2026</div>
+            </div>
+          </div>
+
+          <div class="event-meta-item">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div>
+              <div class="label">Time</div>
+              <div class="value">2:00 PM &ndash; 5:00 PM</div>
+            </div>
+          </div>
+
+          <div class="event-meta-item">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <div class="label">Location</div>
+              <div class="value">Knox College, Seeley Hall<br>59 St George St<br>Toronto, ON M5S 2E6</div>
+            </div>
+          </div>
+
+          <div class="event-meta-item">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            <div>
+              <div class="label">Dress Code</div>
+              <div class="value">Business casual / Smart casual</div>
+            </div>
+          </div>
+
+          <div class="event-meta-item">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            <div>
+              <div class="label">Admission</div>
+              <div class="value">Free &mdash; Registration required</div>
+            </div>
+          </div>
+
+          <a href="#register" class="btn-register">Register Now</a>
+          <a href="contact.html" class="btn-register-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sponsors Section -->
+  <section class="sponsors-section">
+    <div class="container">
+      <h2>With Gratitude to Our Sponsors</h2>
+
+      <div class="sponsors-tier-label">Premier Sponsors</div>
+      <div class="sponsors-grid">
+        <div class="sponsor-logo">
+          <img src="https://www.sickkids.ca/contentassets/232e33f4208c495eb192e035ee7ba6e5/sickkids-logo-desktop-140x42.png" alt="SickKids - The Hospital for Sick Children">
+        </div>
+        <div class="sponsor-logo">
+          <img src="https://www.uhn.ca/_catalogs/masterpage/UHN/img/svg/logo/logo-uhn.svg" alt="UHN - University Health Network">
+        </div>
+        <div class="sponsor-logo">
+          <img src="https://cornerstonephysio.com/wp-content/uploads/2020/06/cornerstone-physiotherapy-logo.png" alt="Cornerstone Physiotherapy">
+        </div>
+        <div class="sponsor-logo">
+          <img src="../images/rebalance-logo.png" alt="Rebalance Sports Medicine">
+        </div>
+      </div>
+
+      <div class="sponsors-tier-label">Supporting Sponsors</div>
+      <div class="sponsors-grid-sm">
+        <div class="sponsor-logo-sm">
+          <img src="https://www.lifemark.ca/sites/default/files/2025-04/Lifemark_logo.svg" alt="Lifemark Health Group">
+        </div>
+        <div class="sponsor-logo-sm">
+          <img src="https://www.cbihealth.ca/_nuxt/0cf8dc5e37ae9b5051670ab4d53814bb.svg" alt="CBI Health">
+        </div>
+        <div class="sponsor-logo-sm">
+          <img src="https://torontophysiotherapy.ca/wp-content/themes/TorontoPhysio_v1.0/images/logo.svg" alt="Toronto Physiotherapy">
+        </div>
+        <div class="sponsor-logo-sm">
+          <img src="https://my.clevelandclinic.org/-/scassets/images/org/logo/cleveland-clinic-canada-logo.svg" alt="Cleveland Clinic Canada">
+        </div>
+        <div class="sponsor-logo-sm">
+          <img src="https://www.sinaihealth.ca/themes/custom/sinai_health/logo.svg" alt="Sinai Health">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration Form -->
+  <section class="registration-section" id="register">
+    <div class="container">
+      <h2>Register for This Event</h2>
+      <p>Please fill out the form below to reserve your spot. Fields marked with * are required.</p>
+
+      <form id="registration-form" class="contact-form" onsubmit="submitRegistration(event)" style="max-width: 720px;">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name *</label>
+            <input type="text" id="first-name" name="firstName" placeholder="First name" required>
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name *</label>
+            <input type="text" id="last-name" name="lastName" placeholder="Last name" required>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="reg-email">Email Address *</label>
+            <input type="email" id="reg-email" name="email" placeholder="alumni@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(416) 555-0123">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="student-id">Student ID</label>
+            <input type="text" id="student-id" name="studentId" placeholder="e.g., 1001234567">
+            <div class="helper-text">If applicable</div>
+          </div>
+          <div class="form-group">
+            <label for="linkedin">LinkedIn Profile URL</label>
+            <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/yourprofile">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="grad-year">Graduation Year *</label>
+            <select id="grad-year" name="gradYear" required>
+              <option value="">Select year...</option>
+              <option value="Current Student">Current Student</option>
+              <option value="2026">2026</option>
+              <option value="2025">2025</option>
+              <option value="2024">2024</option>
+              <option value="2023">2023</option>
+              <option value="2022">2022</option>
+              <option value="2021">2021</option>
+              <option value="2020">2020</option>
+              <option value="2019">2019</option>
+              <option value="2018">2018</option>
+              <option value="2017">2017</option>
+              <option value="2016">2016</option>
+              <option value="2015">2015</option>
+              <option value="2014">2014</option>
+              <option value="2013">2013</option>
+              <option value="2012">2012</option>
+              <option value="2011">2011</option>
+              <option value="2010">2010</option>
+              <option value="2009">2009</option>
+              <option value="2008">2008</option>
+              <option value="2007">2007</option>
+              <option value="2006">2006</option>
+              <option value="2005">2005</option>
+              <option value="2004">2004</option>
+              <option value="2003">2003</option>
+              <option value="2002">2002</option>
+              <option value="2001">2001</option>
+              <option value="2000">2000</option>
+              <option value="1999">1999</option>
+              <option value="1998">1998</option>
+              <option value="1997">1997</option>
+              <option value="1996">1996</option>
+              <option value="1995">1995</option>
+              <option value="1994">1994</option>
+              <option value="1993">1993</option>
+              <option value="1992">1992</option>
+              <option value="1991">1991</option>
+              <option value="1990">1990</option>
+              <option value="1989">1989</option>
+              <option value="1988">1988</option>
+              <option value="1987">1987</option>
+              <option value="1986">1986</option>
+              <option value="1985">1985</option>
+              <option value="1984">1984</option>
+              <option value="1983">1983</option>
+              <option value="1982">1982</option>
+              <option value="1981">1981</option>
+              <option value="1980">1980</option>
+              <option value="1979">1979</option>
+              <option value="1978">1978</option>
+              <option value="1977">1977</option>
+              <option value="1976">1976</option>
+              <option value="1975">1975</option>
+              <option value="1974">1974</option>
+              <option value="1973">1973</option>
+              <option value="1972">1972</option>
+              <option value="1971">1971</option>
+              <option value="1970">1970</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="dietary">Dietary Restrictions</label>
+          <input type="text" id="dietary" name="dietary" placeholder="e.g., Vegetarian, Gluten-free, None">
+        </div>
+
+        <div class="form-group">
+          <label for="hear-about">How did you hear about this event?</label>
+          <select id="hear-about" name="hearAbout">
+            <option value="">Select...</option>
+            <option value="Email">Email</option>
+            <option value="Social Media">Social Media</option>
+            <option value="Word of Mouth">Word of Mouth</option>
+            <option value="Alumni Website">Alumni Website</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Additional Comments</label>
+          <textarea id="comments" name="comments" placeholder="Any questions or comments..." rows="4"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%;">Register Now</button>
+      </form>
+
+      <div id="registration-success" style="display: none;">
+        <h3>Registration Successful!</h3>
+        <p>Thank you for registering for the UofT Physiotherapy Alumni Reception. You will receive a confirmation email with a QR code to be used on the day of the event within 5&ndash;7 business days. We look forward to seeing you on May 18, 2026!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>Have Questions About This Event?</h2>
+    <p>Reach out to the Alumni Relations Office for more information or assistance with registration.</p>
+    <a href="contact.html" class="btn btn-gold">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img class="logo-icon" src="https://upload.wikimedia.org/wikipedia/en/0/04/Utoronto_coa.svg" alt="University of Toronto Coat of Arms" width="40" height="40" style="filter: brightness(0) invert(1); opacity: 0.85;">
+            <div class="logo-text">
+              <span class="university">University of Toronto</span>
+              <span class="faculty">Temerty Medicine Alumni</span>
+            </div>
+          </div>
+          <p>Connecting graduates of Canada's largest and most research-intensive medical school.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="#">Alumni Directory</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Career Services</a></li>
+            <li><a href="#">CME Programs</a></li>
+            <li><a href="#">Library Access</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="mailto:medicine.advencement@utorontoalumni.ca">medicine.advencement@utorontoalumni.ca</a></li>
+            <li><a href="tel:+14169781234">+1 (416) 978-1234</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 University of Toronto Temerty Faculty of Medicine. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="../js/firebase-config.js"></script>
+  <script src="../js/registration.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+</html>

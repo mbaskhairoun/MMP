@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temerty Faculty of Medicine Alumni | University of Toronto</title>
+  <meta name="description" content="Connect with fellow alumni of the University of Toronto Temerty Faculty of Medicine. Events, news, mentorship, and community.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- UofT Favicon (blue shield) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23002A5C'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='18' font-weight='bold' font-family='serif'>T</text></svg>">
+</head>
+<body>
+
+  <!-- Top Utility Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>University of Toronto &mdash; Temerty Faculty of Medicine</span>
+      <div class="top-bar-links">
+        <a href="https://www.utoronto.ca" target="_blank">UofT Home</a>
+        <a href="https://temertymedicine.utoronto.ca" target="_blank">Faculty of Medicine</a>
+        <a href="#">Alumni Portal Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">
+        <img class="logo-icon" src="https://upload.wikimedia.org/wikipedia/en/0/04/Utoronto_coa.svg" alt="University of Toronto Coat of Arms">
+        <div class="logo-text">
+          <span class="university">University of Toronto</span>
+          <span class="faculty">Temerty Medicine Alumni</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav id="main-nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="pages/events.html">Events</a></li>
+          <li><a href="pages/news.html">News</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Welcome Home, Alumni</h1>
+      <p>Stay connected with the Temerty Faculty of Medicine community. Discover events, celebrate achievements, and shape the future of medicine together.</p>
+      <div class="hero-buttons">
+        <a href="pages/events.html" class="btn btn-gold">Upcoming Events</a>
+        <a href="pages/about.html" class="btn btn-outline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Bar -->
+  <div class="container">
+    <div class="stats-bar">
+      <div class="stat-item">
+        <h3>35,000+</h3>
+        <p>Alumni Worldwide</p>
+      </div>
+      <div class="stat-item">
+        <h3>180+</h3>
+        <p>Years of Excellence</p>
+      </div>
+      <div class="stat-item">
+        <h3>80+</h3>
+        <p>Countries Represented</p>
+      </div>
+      <div class="stat-item">
+        <h3>$250M+</h3>
+        <p>In Alumni Giving</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Links / Features -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Stay Engaged</h2>
+      <p class="section-subtitle">Explore ways to connect, give back, and grow with the Temerty Medicine community.</p>
+      <div class="features-grid" style="margin-top: 32px;">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <h3>Alumni Directory</h3>
+          <p>Find and reconnect with classmates and colleagues across the globe.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          </div>
+          <h3>Events &amp; Reunions</h3>
+          <p>Join class reunions, lectures, and networking events throughout the year.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          </div>
+          <h3>Mentorship</h3>
+          <p>Guide the next generation of medical professionals through our mentorship program.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">
+            <svg width="28" height="28" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Continuing Education</h3>
+          <p>Access professional development, CME courses, and lifelong learning resources.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Events -->
+  <section class="alt-bg">
+    <div class="container">
+      <h2 class="section-title">Upcoming Events</h2>
+      <div class="events-list">
+
+        <a href="pages/event-physio-reception.html" style="text-decoration:none; color:inherit;">
+        <div class="event-card">
+          <div class="event-date-block">
+            <span class="month">May</span>
+            <span class="day">18</span>
+            <span class="year">2026</span>
+          </div>
+          <div class="event-info">
+            <span class="card-tag">Reception</span>
+            <h3>UofT Physiotherapy Alumni Reception</h3>
+            <div class="event-details">
+              <span>&#128205; Knox College, Seeley Hall, Toronto</span>
+              <span>&#128336; 2:00 PM &ndash; 5:00 PM</span>
+            </div>
+            <p>A formal afternoon reception for physiotherapy alumni, students, and professionals. Networking, light program remarks, and refreshments at historic Knox College.</p>
+          </div>
+        </div>
+        </a>
+
+        <a href="pages/event-class-reunion-2016.html" style="text-decoration:none; color:inherit;">
+        <div class="event-card">
+          <div class="event-date-block">
+            <span class="month">Apr</span>
+            <span class="day">12</span>
+            <span class="year">2026</span>
+          </div>
+          <div class="event-info">
+            <span class="card-tag">Reunion</span>
+            <h3>Class of 2016 &mdash; 10-Year Reunion</h3>
+            <div class="event-details">
+              <span>&#128205; Medical Sciences Building, Toronto</span>
+              <span>&#128336; 6:00 PM &ndash; 10:00 PM</span>
+            </div>
+            <p>Celebrate a decade since graduation with classmates, faculty, and friends. Dinner and program included.</p>
+          </div>
+        </div>
+        </a>
+
+        <a href="pages/event-distinguished-lecture.html" style="text-decoration:none; color:inherit;">
+        <div class="event-card">
+          <div class="event-date-block">
+            <span class="month">May</span>
+            <span class="day">03</span>
+            <span class="year">2026</span>
+          </div>
+          <div class="event-info">
+            <span class="card-tag">Lecture</span>
+            <h3>Annual Temerty Distinguished Lecture</h3>
+            <div class="event-details">
+              <span>&#128205; MaRS Auditorium, Toronto</span>
+              <span>&#128336; 5:30 PM &ndash; 7:30 PM</span>
+            </div>
+            <p>Featuring Dr. Sarah Chen on "The Future of Precision Medicine: From Bench to Bedside."</p>
+          </div>
+        </div>
+        </a>
+
+        <a href="pages/event-mentorship-mixer.html" style="text-decoration:none; color:inherit;">
+        <div class="event-card">
+          <div class="event-date-block">
+            <span class="month">Jun</span>
+            <span class="day">18</span>
+            <span class="year">2026</span>
+          </div>
+          <div class="event-info">
+            <span class="card-tag">Networking</span>
+            <h3>Alumni &amp; Student Mentorship Mixer</h3>
+            <div class="event-details">
+              <span>&#128205; Hart House, University of Toronto</span>
+              <span>&#128336; 4:00 PM &ndash; 6:30 PM</span>
+            </div>
+            <p>Connect with current Temerty Medicine students seeking career guidance and mentorship.</p>
+          </div>
+        </div>
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: 36px;">
+        <a href="pages/events.html" class="btn btn-outline-dark">View All Events</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest News -->
+  <section>
+    <div class="container">
+      <h2 class="section-title">Latest News</h2>
+      <div class="card-grid">
+
+        <article class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?w=600&h=400&fit=crop" alt="Laboratory research with microscope">
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Research</span>
+            <div class="card-meta">
+              <span>Mar 15, 2026</span>
+            </div>
+            <h3><a href="#">Temerty Researchers Achieve Breakthrough in Neurodegenerative Disease Treatment</a></h3>
+            <p>A team led by Dr. Michael Torres has identified a novel therapeutic target for Alzheimer's disease, opening new avenues for treatment.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=600&h=400&fit=crop" alt="Medical professional receiving award">
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Alumni Achievement</span>
+            <div class="card-meta">
+              <span>Mar 08, 2026</span>
+            </div>
+            <h3><a href="#">Dr. Priya Sharma (MD '05) Named to Order of Canada</a></h3>
+            <p>Recognized for her pioneering work in global health and her efforts to improve maternal care in underserved communities.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-image">
+            <img src="https://images.unsplash.com/photo-1587351021759-3e566b6af7cc?w=600&h=400&fit=crop" alt="Modern medical simulation centre">
+          </div>
+          <div class="card-body">
+            <span class="card-tag">Campus</span>
+            <div class="card-meta">
+              <span>Feb 28, 2026</span>
+            </div>
+            <h3><a href="#">New Simulation Centre Opens at Temerty Faculty of Medicine</a></h3>
+            <p>The state-of-the-art facility features advanced surgical simulators and AI-driven clinical training environments.</p>
+          </div>
+        </article>
+
+      </div>
+      <div style="text-align: center; margin-top: 36px;">
+        <a href="pages/news.html" class="btn btn-outline-dark">All News &amp; Stories</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alumni Spotlight -->
+  <section class="alt-bg">
+    <div class="container">
+      <h2 class="section-title">Alumni Spotlight</h2>
+      <div class="spotlight-grid">
+
+        <div class="spotlight-card">
+          <div class="spotlight-avatar">
+            <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=200&h=200&fit=crop&crop=face" alt="Dr. James Okafor">
+          </div>
+          <h3>Dr. James Okafor</h3>
+          <p class="role">Chief of Surgery, Sunnybrook Health Sciences</p>
+          <p class="grad-year">MD Class of 1998</p>
+          <blockquote>"The Temerty Faculty gave me the foundation to pursue surgical innovation. I carry those lessons with me every day in the operating room."</blockquote>
+        </div>
+
+        <div class="spotlight-card">
+          <div class="spotlight-avatar">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=200&h=200&fit=crop&crop=face" alt="Dr. Emily Zhang">
+          </div>
+          <h3>Dr. Emily Zhang</h3>
+          <p class="role">Director of AI Research, SickKids Hospital</p>
+          <p class="grad-year">MD/PhD Class of 2010</p>
+          <blockquote>"My time at UofT shaped my approach to combining clinical practice with cutting-edge research. The mentorship I received was transformative."</blockquote>
+        </div>
+
+        <div class="spotlight-card">
+          <div class="spotlight-avatar">
+            <img src="https://images.unsplash.com/photo-1594824476967-48c8b964ac31?w=200&h=200&fit=crop&crop=face" alt="Dr. Anika Patel">
+          </div>
+          <h3>Dr. Anika Patel</h3>
+          <p class="role">WHO Global Health Advisor</p>
+          <p class="grad-year">MD Class of 2003</p>
+          <blockquote>"UofT taught me that medicine is about more than treating patients &mdash; it's about building systems that serve communities worldwide."</blockquote>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Banner -->
+  <section class="cta-banner">
+    <h2>Make a Difference Today</h2>
+    <p>Your generosity supports scholarships, groundbreaking research, and the next generation of medical leaders at UofT.</p>
+    <a href="#" class="btn btn-gold">Donate Now</a>
+    <a href="pages/contact.html" class="btn btn-outline">Get in Touch</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img class="logo-icon" src="https://upload.wikimedia.org/wikipedia/en/0/04/Utoronto_coa.svg" alt="University of Toronto Coat of Arms" width="40" height="40" style="filter: brightness(0) invert(1); opacity: 0.85;">
+            <div class="logo-text">
+              <span class="university">University of Toronto</span>
+              <span class="faculty">Temerty Medicine Alumni</span>
+            </div>
+          </div>
+          <p>Connecting graduates of Canada's largest and most research-intensive medical school. Together, we advance health for all.</p>
+        </div>
+
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/events.html">Events</a></li>
+            <li><a href="pages/news.html">News</a></li>
+            <li><a href="#">Alumni Directory</a></li>
+            <li><a href="#">Mentorship Program</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Career Services</a></li>
+            <li><a href="#">CME Programs</a></li>
+            <li><a href="#">Library Access</a></li>
+            <li><a href="#">Transcript Requests</a></li>
+            <li><a href="#">Volunteer</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="pages/contact.html">Contact Us</a></li>
+            <li><a href="mailto:medicine.advencement@utorontoalumni.ca">medicine.advencement@utorontoalumni.ca</a></li>
+            <li><a href="tel:+14169781234">+1 (416) 978-1234</a></li>
+            <li style="margin-top: 16px;">
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="LinkedIn">in</a>
+                <a href="#" class="social-link" aria-label="Twitter">X</a>
+                <a href="#" class="social-link" aria-label="Instagram">ig</a>
+                <a href="#" class="social-link" aria-label="Facebook">f</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 University of Toronto Temerty Faculty of Medicine. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

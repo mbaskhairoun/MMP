@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cd:*)",
+      "WebSearch",
+      "WebFetch(domain:brand.utoronto.ca)",
+      "WebFetch(domain:spacesandexperiences.utoronto.ca)",
+      "WebFetch(domain:www.logo.wine)",
+      "WebFetch(domain:en.wikipedia.org)",
+      "WebFetch(domain:upload.wikimedia.org)",
+      "WebFetch(domain:www.utoronto.ca)",
+      "WebFetch(domain:www.sickkids.ca)",
+      "WebFetch(domain:www.uhn.ca)",
+      "WebFetch(domain:cornerstonephysio.com)",
+      "WebFetch(domain:rebalancesportsmedicine.com)",
+      "WebFetch(domain:rebalancetoronto.com)",
+      "WebFetch(domain:www.lifemark.ca)",
+      "WebFetch(domain:www.cbihealth.ca)",
+      "WebFetch(domain:www.pthealth.com)",
+      "WebFetch(domain:www.athletescare.com)",
+      "WebFetch(domain:www.clevelandclinic.ca)",
+      "WebFetch(domain:www.sinaihealth.ca)",
+      "WebFetch(domain:my.clevelandclinic.org)",
+      "WebFetch(domain:www.torontophysiotherapy.ca)"
+    ]
+  }
+}

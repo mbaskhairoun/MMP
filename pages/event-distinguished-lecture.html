@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Annual Temerty Distinguished Lecture | Temerty Medicine Alumni | University of Toronto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23002A5C'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='18' font-weight='bold' font-family='serif'>T</text></svg>">
+  <style>
+    .event-banner {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      display: block;
+      border-radius: 12px;
+      margin-bottom: 40px;
+    }
+    .event-detail-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 48px;
+      margin-top: 8px;
+    }
+    .event-sidebar {
+      background: #f5f7fa;
+      border-radius: 10px;
+      padding: 32px 28px;
+      height: fit-content;
+      position: sticky;
+      top: 100px;
+    }
+    .event-sidebar h3 {
+      font-size: 1.1rem;
+      color: #002A5C;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #002A5C;
+    }
+    .event-meta-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+    .event-meta-item svg {
+      flex-shrink: 0;
+      margin-top: 2px;
+      color: #002A5C;
+    }
+    .event-meta-item .label {
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: #888;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+    .event-meta-item .value {
+      font-size: 0.95rem;
+      color: #1a1a2e;
+      line-height: 1.5;
+    }
+    .event-main h2 {
+      font-family: 'Georgia', serif;
+      color: #002A5C;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      margin-top: 36px;
+    }
+    .event-main h2:first-of-type {
+      margin-top: 0;
+    }
+    .event-main p {
+      font-size: 1rem;
+      line-height: 1.75;
+      color: #333;
+      margin-bottom: 16px;
+    }
+    .expect-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .expect-list li {
+      padding: 12px 0;
+      border-bottom: 1px solid #e8e8e8;
+      font-size: 0.95rem;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .expect-list li:last-child {
+      border-bottom: none;
+    }
+    .expect-list li::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #002A5C;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .speaker-card {
+      background: linear-gradient(135deg, #f5f7fa 0%, #eef1f6 100%);
+      border-left: 4px solid #002A5C;
+      border-radius: 8px;
+      padding: 28px;
+      margin-top: 12px;
+      margin-bottom: 16px;
+    }
+    .speaker-card h3 {
+      font-family: 'Georgia', serif;
+      color: #002A5C;
+      font-size: 1.15rem;
+      margin-bottom: 4px;
+    }
+    .speaker-card .speaker-title {
+      font-size: 0.85rem;
+      color: #0062CC;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .speaker-card p {
+      font-size: 0.92rem;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 0;
+    }
+    .btn-register {
+      display: inline-block;
+      background: #002A5C;
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      width: 100%;
+      margin-top: 24px;
+      transition: background 0.2s;
+    }
+    .btn-register:hover {
+      background: #001a3a;
+    }
+    .btn-register-outline {
+      display: inline-block;
+      background: transparent;
+      color: #002A5C;
+      border: 2px solid #002A5C;
+      padding: 12px 36px;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      text-align: center;
+      width: 100%;
+      margin-top: 10px;
+      transition: all 0.2s;
+    }
+    .btn-register-outline:hover {
+      background: #002A5C;
+      color: #fff;
+    }
+    .event-tag {
+      display: inline-block;
+      background: #002A5C;
+      color: #fff;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 14px;
+      border-radius: 20px;
+      margin-bottom: 12px;
+    }
+    .admission-note {
+      background: #e8f4e8;
+      border-radius: 8px;
+      padding: 16px 20px;
+      font-size: 0.92rem;
+      color: #1a5c1a;
+      font-weight: 500;
+      margin-top: 20px;
+      text-align: center;
+    }
+    @media (max-width: 768px) {
+      .event-detail-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+      }
+      .event-banner {
+        height: 220px;
+        border-radius: 8px;
+      }
+      .event-sidebar {
+        position: static;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>University of Toronto &mdash; Temerty Faculty of Medicine</span>
+      <div class="top-bar-links">
+        <a href="https://www.utoronto.ca" target="_blank">UofT Home</a>
+        <a href="https://temertymedicine.utoronto.ca" target="_blank">Faculty of Medicine</a>
+        <a href="#">Alumni Portal Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img class="logo-icon" src="https://upload.wikimedia.org/wikipedia/en/0/04/Utoronto_coa.svg" alt="University of Toronto Coat of Arms">
+        <div class="logo-text">
+          <span class="university">University of Toronto</span>
+          <span class="faculty">Temerty Medicine Alumni</span>
+        </div>
+      </a>
+      <button class="mobile-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="events.html" class="active">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> <a href="events.html">Events</a> <span>/</span> Annual Temerty Distinguished Lecture</div>
+      <h1>Annual Temerty Distinguished Lecture</h1>
+      <p>Featuring leading voices in medicine and science.</p>
+    </div>
+  </div>
+
+  <!-- Event Content -->
+  <section>
+    <div class="container">
+      <img class="event-banner" src="https://images.unsplash.com/photo-1475721027785-f74eccf877e2?w=1200&h=400&fit=crop" alt="Distinguished Lecture event banner">
+
+      <div class="event-detail-grid">
+        <!-- Main Content -->
+        <div class="event-main">
+          <span class="event-tag">Lecture</span>
+          <h2>About This Event</h2>
+          <p>The Annual Temerty Distinguished Lecture features leading voices in medicine and science. This year, Dr. Sarah Chen presents <em>"The Future of Precision Medicine: From Bench to Bedside,"</em> exploring how genomic data and AI are transforming diagnosis and treatment. Reception to follow.</p>
+          <p>Now in its 15th year, the Temerty Distinguished Lecture Series continues to bring world-class researchers and clinicians to the University of Toronto community. This flagship event is a highlight of the academic calendar, drawing alumni, students, faculty, and members of the broader medical community.</p>
+
+          <h2>Featured Speaker</h2>
+          <div class="speaker-card">
+            <h3>Dr. Sarah Chen</h3>
+            <div class="speaker-title">Director, Precision Medicine Initiative at Stanford</div>
+            <p>Dr. Sarah Chen is a world-renowned genomicist and Director of the Precision Medicine Initiative at Stanford. Her work on CRISPR applications in cancer treatment has been published in Nature, The Lancet, and NEJM. She brings a bold vision for how personalized genomic therapies will reshape clinical practice in the coming decade.</p>
+          </div>
+
+          <h2>What to Expect</h2>
+          <ul class="expect-list">
+            <li>Welcome remarks from the Dean</li>
+            <li>Distinguished Lecture presentation (60 min)</li>
+            <li>Audience Q&amp;A session</li>
+            <li>Networking reception with light refreshments</li>
+          </ul>
+
+          <h2>Admission</h2>
+          <p>Free and open to all alumni, students, and faculty. Registration is required to secure your seat, as capacity is limited.</p>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="event-sidebar">
+          <h3>Event Details</h3>
+
+          <div class="event-meta-item">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+            <div>
+              <div class="label">Date</div>
+              <div class="value">May 3, 2026</div>
+            </div>
+          </div>
+
+          <div class="event-meta-item">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            <div>
+              <div class="label">Time</div>
+              <div class="value">5:30 PM &ndash; 7:30 PM</div>
+            </div>
+          </div>
+
+          <div class="event-meta-item">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <div class="label">Location</div>
+              <div class="value">MaRS Auditorium<br>101 College St<br>Toronto, ON</div>
+            </div>
+          </div>
+
+          <div class="event-meta-item">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            <div>
+              <div class="label">Cost</div>
+              <div class="value">Free</div>
+            </div>
+          </div>
+
+          <div class="admission-note">Registration required. Open to all alumni, students, and faculty.</div>
+
+          <a href="mailto:medicine.advencement@utorontoalumni.ca?subject=RSVP%3A%20Annual%20Temerty%20Distinguished%20Lecture" class="btn-register">Register Now</a>
+          <a href="contact.html" class="btn-register-outline">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>Have Questions About This Event?</h2>
+    <p>Reach out to the Alumni Relations Office for more information or assistance with registration.</p>
+    <a href="contact.html" class="btn btn-gold">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img class="logo-icon" src="https://upload.wikimedia.org/wikipedia/en/0/04/Utoronto_coa.svg" alt="University of Toronto Coat of Arms" width="40" height="40" style="filter: brightness(0) invert(1); opacity: 0.85;">
+            <div class="logo-text">
+              <span class="university">University of Toronto</span>
+              <span class="faculty">Temerty Medicine Alumni</span>
+            </div>
+          </div>
+          <p>Connecting graduates of Canada's largest and most research-intensive medical school.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="#">Alumni Directory</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Career Services</a></li>
+            <li><a href="#">CME Programs</a></li>
+            <li><a href="#">Library Access</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="mailto:medicine.advencement@utorontoalumni.ca">medicine.advencement@utorontoalumni.ca</a></li>
+            <li><a href="tel:+14169781234">+1 (416) 978-1234</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 University of Toronto Temerty Faculty of Medicine. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
