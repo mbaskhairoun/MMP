@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQs | Temerty Medicine Alumni | University of Toronto</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23002A5C'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' fill='white' font-size='18' font-weight='bold' font-family='serif'>T</text></svg>">
+  <style>
+    .faq-list { max-width: 800px; margin: 0 auto; }
+    .faq-list details {
+      background: var(--uoft-white);
+      border: 1px solid var(--uoft-mid-gray);
+      border-radius: var(--radius-lg);
+      margin-bottom: 12px;
+      overflow: hidden;
+      transition: box-shadow var(--transition);
+    }
+    .faq-list details:hover { box-shadow: var(--shadow-md); }
+    .faq-list details[open] { border-color: var(--uoft-navy); }
+    .faq-list summary {
+      padding: 18px 24px;
+      font-family: var(--font-serif);
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: var(--uoft-navy);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+    .faq-list summary::-webkit-details-marker { display: none; }
+    .faq-list summary::after {
+      content: '+';
+      font-size: 1.4rem;
+      font-weight: 400;
+      color: var(--uoft-navy);
+      flex-shrink: 0;
+      transition: transform var(--transition);
+    }
+    .faq-list details[open] summary::after {
+      content: '\2212';
+    }
+    .faq-list .faq-answer {
+      padding: 0 24px 18px;
+      color: var(--uoft-text);
+      line-height: 1.7;
+    }
+    .faq-list .faq-answer p { margin-bottom: 8px; }
+    .faq-list .faq-answer p:last-child { margin-bottom: 0; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <span>University of Toronto &mdash; Temerty Faculty of Medicine</span>
+      <div class="top-bar-links">
+        <a href="https://www.utoronto.ca" target="_blank">UofT Home</a>
+        <a href="https://temertymedicine.utoronto.ca" target="_blank">Faculty of Medicine</a>
+        <a href="#">Alumni Portal Login</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <a href="../index.html" class="logo">
+        <img class="logo-icon" src="https://upload.wikimedia.org/wikipedia/en/0/04/Utoronto_coa.svg" alt="University of Toronto Coat of Arms">
+        <div class="logo-text">
+          <span class="university">University of Toronto</span>
+          <span class="faculty">Temerty Medicine Alumni</span>
+        </div>
+      </a>
+      <button class="mobile-toggle" aria-label="Toggle navigation" onclick="toggleNav()">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="main-nav">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="../index.html#events">Events</a></li>
+          <li><a href="news.html">News</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="../index.html">Home</a> <span>/</span> FAQs</div>
+      <h1>Frequently Asked Questions</h1>
+      <p>Find answers to common questions about alumni services, events, and resources.</p>
+    </div>
+  </div>
+
+  <!-- FAQs -->
+  <section>
+    <div class="container">
+      <div class="faq-list">
+
+        <details>
+          <summary>How do I update my contact information in the alumni database?</summary>
+          <div class="faq-answer">
+            <p>Log in to the Alumni Portal using your UTORid or the credentials you created during registration. Navigate to "My Profile" to update your address, email, phone number, and professional information. Changes are reflected in the alumni directory within 24 hours.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How can I access the Alumni Directory?</summary>
+          <div class="faq-answer">
+            <p>The Alumni Directory is available to all registered alumni through the Alumni Portal. After logging in, select "Alumni Directory" from the main menu. You can search by name, class year, specialty, or location. Please note that alumni control their own privacy settings, so some profiles may have limited visibility.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I register for alumni events?</summary>
+          <div class="faq-answer">
+            <p>Visit the Events section on our website or the Alumni Portal to view upcoming events. Click on any event for details and registration. Most events offer online registration with credit card payment. Some events are complimentary for alumni, while others may require a registration fee.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I request an official transcript?</summary>
+          <div class="faq-answer">
+            <p>Official transcripts are managed by the University of Toronto Office of the Registrar through the ACORN system. Log in with your UTORid, navigate to Transcript Requests, and follow the prompts. Fees range from $12 to $25 per copy depending on the format and delivery method. Visit our <a href="transcript-requests.html">Transcript Requests</a> page for detailed instructions.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>What mentorship opportunities are available?</summary>
+          <div class="faq-answer">
+            <p>The Temerty Medicine Mentorship Program pairs alumni with current students and early-career physicians. You can sign up as a mentor, mentee, or both through the Alumni Portal. Our team matches participants based on specialty, interests, and goals. Visit our <a href="mentorship.html">Mentorship Program</a> page to learn more.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How can I make a donation to the Faculty of Medicine?</summary>
+          <div class="faq-answer">
+            <p>You can make a gift online through the University of Toronto's secure donation portal. Gifts can be directed to specific funds, including student scholarships, research programs, or the Faculty's greatest needs. For information about major gifts, planned giving, or naming opportunities, contact the Advancement Office at <a href="mailto:medicine.advancement@utorontoalumni.ca">medicine.advancement@utorontoalumni.ca</a>.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Do alumni have access to the university library?</summary>
+          <div class="faq-answer">
+            <p>Yes. Alumni can apply for an Alumni Library Card, which grants borrowing privileges at all UofT library branches and on-site access to electronic databases. Selected digital resources are also available remotely. Visit our <a href="library-access.html">Library Access</a> page for details on how to apply.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How do I earn CME credits through the university?</summary>
+          <div class="faq-answer">
+            <p>The University of Toronto's Continuing Professional Development office offers accredited CME programs including conferences, workshops, and online modules. Alumni receive preferred pricing on many programs. Visit our <a href="cme-programs.html">CME Programs</a> page for the current catalogue and registration information.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>How can I volunteer with the Alumni Association?</summary>
+          <div class="faq-answer">
+            <p>There are many ways to get involved, including mentoring, event planning, serving on committees, supporting fundraising campaigns, and delivering guest lectures. Visit our <a href="volunteer.html">Volunteer Opportunities</a> page or contact us at <a href="mailto:medicine.advancement@utorontoalumni.ca">medicine.advancement@utorontoalumni.ca</a> to learn about current opportunities.</p>
+          </div>
+        </details>
+
+        <details>
+          <summary>Who do I contact for general alumni inquiries?</summary>
+          <div class="faq-answer">
+            <p>For general inquiries, reach out to the Alumni Advancement Office by email at <a href="mailto:medicine.advancement@utorontoalumni.ca">medicine.advancement@utorontoalumni.ca</a> or by phone at <a href="tel:+14169786585">(416) 978-6585</a>. Our office is open Monday to Friday, 9:00 AM to 5:00 PM EST. You can also visit our <a href="contact.html">Contact</a> page for additional ways to reach us.</p>
+          </div>
+        </details>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <h2>Still Have Questions?</h2>
+    <p>Our team is here to help. Reach out and we will get back to you promptly.</p>
+    <a href="contact.html" class="btn btn-outline">Contact Us</a>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <img class="logo-icon" src="https://upload.wikimedia.org/wikipedia/en/0/04/Utoronto_coa.svg" alt="University of Toronto Coat of Arms" width="40" height="40" style="opacity: 1;">
+            <div class="logo-text">
+              <span class="university">University of Toronto</span>
+              <span class="faculty">Temerty Medicine Alumni</span>
+            </div>
+          </div>
+          <p>Connecting graduates of Canada's largest and most research-intensive medical school.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="../index.html#events">Events</a></li>
+            <li><a href="news.html">News</a></li>
+            <li><a href="alumni-directory.html">Alumni Directory</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="career-services.html">Career Services</a></li>
+            <li><a href="cme-programs.html">CME Programs</a></li>
+            <li><a href="library-access.html">Library Access</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="mailto:medicine.advancement@utorontoalumni.ca">medicine.advancement@utorontoalumni.ca</a></li>
+            <li><a href="tel:+14169786585">(416) 978-6585</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 University of Toronto Temerty Faculty of Medicine. All rights reserved.</span>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

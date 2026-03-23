@@ -66,7 +66,7 @@ async function submitRegistration(event) {
     successDiv.style.display = 'block';
   } catch (error) {
     console.error('Registration error:', error);
-    alert('There was an error submitting your registration. Please try again or contact us at medicine.advencement@utorontoalumni.ca');
+    alert('There was an error submitting your registration. Please try again or contact us at medicine.advancement@utorontoalumni.ca');
 
     // Re-enable the submit button so the user can retry
     submitBtn.disabled = false;
